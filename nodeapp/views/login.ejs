@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>mynewapp</title>
+<link rel="stylesheet" href="/stylesheets/style.css">
+<link rel="stylesheet" href='/stylesheets/bootstrap.css'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="javascripts/bootstrap.js"></script>
+</head>
+
+<body>
+
+  <ul class="nav header" >
+
+  <li class="nav-item">
+    <a class="nav-link" href="/">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/login/">Login</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/register">Register</a>
+  </li>
+
+  <li class="heading"><b>OLX</b></li>
+</ul>
+<div class="div2">
+  <h2>login</h2>
+</div>
+<div class="div1" >
+  <form action="/users/login/" method="post">
+    <div class="form-group col-md-6">
+      <label>Name</label>
+      <input type="text" name="name" class="form-control" required>
+    </div>
+    <div class="form-group col-md-6">
+      <label>Password</label>
+      <input type="password" name="password" class="form-control" required>
+    </div>
+    <button type="submit" class="btn btn-primary">submit</button>
+  </form>
+</div>
+</body>
+</html>

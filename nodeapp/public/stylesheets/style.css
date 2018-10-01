@@ -1,0 +1,22 @@
+body {
+
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.heading{
+  color:white;font-size:35px;padding-top:5px;padding-left:300px;
+}
+
+.header{
+  background-color:darkblue;height: 50px;
+}
+.div1{
+  padding-top:50px;padding-left:10px;
+}
+.div2{
+  padding-top: 30px;padding-left: 20px;
+}
