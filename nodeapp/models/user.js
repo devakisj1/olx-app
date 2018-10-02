@@ -1,10 +1,9 @@
 
-
 var mongoose = require('mongoose');
 
 mongoose.connect('mongodb://localhost/nodedb');
 
-var db = mongoose.connection;
+
 var UserSchema = mongoose.Schema({
 	username: {
 		type:String,

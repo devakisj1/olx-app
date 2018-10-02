@@ -29,7 +29,7 @@ router.post('/login',login);
 
 
 function register(req,res){
-
+  try{
     var username = req.body.username;
     var email=req.body.email;
     var pass = req.body.password;
@@ -40,12 +40,20 @@ function register(req,res){
       email:email,
     });
     User.createUser(newUser,function(err,user){
+      if (err) {
+        throw(err);
+
+      }
     console.log(user);
     });
     res.redirect('/')
-
-
-
+  }
+  catch(e){
+    res.send({
+      status:false,
+      msg : "registration failed"
+    });
+  }
 
 }
 router.post('/register',register);
