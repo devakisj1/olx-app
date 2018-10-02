@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>mynewapp</title>
+<title>login</title>
 <link rel="stylesheet" href="/stylesheets/style.css">
 <link rel="stylesheet" href='/stylesheets/bootstrap.css'>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -19,7 +19,7 @@
     <a class="nav-link" href="/login/">Login</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="/register">Register</a>
+    <a class="nav-link" href="/register/">Register</a>
   </li>
 
   <li class="heading"><b>OLX</b></li>
@@ -30,8 +30,8 @@
 <div class="div1" >
   <form action="/users/login/" method="post">
     <div class="form-group col-md-6">
-      <label>Name</label>
-      <input type="text" name="name" class="form-control" required>
+      <label>Username</label>
+      <input type="text" name="username" class="form-control" required>
     </div>
     <div class="form-group col-md-6">
       <label>Password</label>

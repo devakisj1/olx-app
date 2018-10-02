@@ -7,23 +7,10 @@ router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
 
-router.post('/layout',function(req,res,next){
-	res.render('layout');
-	var name= req.body.name;
-	var name= req.body.password;
-
-	req.checkBody('name','name is required').notEmpty();
-});
-
-router.post('/register',function(req,res,next){
-	res.render('login');
-});
-
-
 function login(req,res){
   try{
     var username = req.body.username;
-    var pass = req.body.pass;
+    var password = req.body.password;
     console.log(req.body);
     res.send({
       status:true,
@@ -42,24 +29,25 @@ router.post('/login',login);
 
 
 function register(req,res){
-  try{
+
     var username = req.body.username;
     var email=req.body.email;
-    var pass = req.body.pass;
+    var pass = req.body.password;
     console.log(req.body);
-    res.send({
-      status:true,
-      msg : "login success"
+    var newUser= new User({
+      username:username,
+      password:password,
+      email:email,
     });
-  }
-  catch(e){
-    res.send({
-      status:false,
-      msg : "login failed"
+    User.createUser(newUser,function(err,user){
+    console.log(user);
     });
-  }
+    res.redirect('/')
+
+
+
 
 }
-router.post('/register',login);
+router.post('/register',register);
 
 module.exports = router;
